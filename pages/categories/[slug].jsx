@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 import { getCategories, getCategoryPost } from "../../servicecalls";
 
-import PostCard from "../../Components/PostCard";
+import PostCard from "../../components/PostCard";
 
 import Link  from "next/link";
 

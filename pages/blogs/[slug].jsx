@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Postdetails from "../../Components/Postdetails";
+import Postdetails from "../../components/Postdetails";
 import { getPostDetails, getPosts } from "../../servicecalls";
 import Head from "next/head";
 import { useRouter } from "next/router";

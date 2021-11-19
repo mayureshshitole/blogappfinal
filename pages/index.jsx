@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import { getPosts } from "../servicecalls";
 
-import PostCard from "../Components/PostCard";
+import PostCard from "../components/PostCard";
 
 export default function Home({ posts }) {
   return (

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/globals.css";
-import Layout from "../Components/Layout";
+import Layout from "../components/Layout";
 import Head from "next/head";
 //import 'tailwindcss/tailwind.css'
 
