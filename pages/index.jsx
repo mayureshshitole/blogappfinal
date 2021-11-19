@@ -24,7 +24,10 @@ export default function Home({ posts }) {
           content="The only destination for you to get Tech News, Apps Reviews, Softwares Reviews, Books Reviews and Unique Gadgets. Genuine and Unbiased blogs!"
         />
         <meta property="og:image" content="/logoGOC.png" />
-        <meta property="og:image:alt" content="logo imge for GearOnlineColts.com" />
+        <meta
+          property="og:image:alt"
+          content="logo imge for GearOnlineColts.com"
+        />
         <meta property="og:url" content="https://www.gearonlinecolts.com/" />
         <meta property="og:site_name" content="www.gearonlinecolts.com" />
         <meta property="og:type" content="article" />
@@ -73,5 +76,6 @@ export async function getStaticProps() {
 
   return {
     props: { posts },
+    revalidate: 60,
   };
 }

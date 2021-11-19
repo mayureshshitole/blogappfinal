@@ -53,7 +53,7 @@ const PostCard = ({ post }) => {
                 {moment(post.createdAt).format("MMM DD, YYYY")}
               </time>
               <svg
-                className="w-7 h-7 hidden sm:inline-block p-1 border border-blue-500 bg-gray-200 rounded-full text-blue-500  font-extrabold hover:animate-slowSpin"
+                className="w-7 h-7 hidden sm:inline-block p-1 cursor-pointer border border-blue-500 bg-gray-200 rounded-full text-blue-500  font-extrabold hover:animate-slowSpin"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

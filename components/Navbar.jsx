@@ -28,7 +28,7 @@ const Navbar = () => {
         <div className=" md:max-w-7xl mx-auto flex  justify-between items-center ">
           <Link passHref href="/">
             <div className="flex justify-center items-center space-x-2 ">
-              <div className="p-0.5 rounded-full bg-white flex items-center hover:animate-slowSpin">
+              <div className="p-0.5 rounded-full bg-white flex items-center cursor-pointer hover:animate-slowSpin">
                 <img
                   src="/logoGOC.png"
                   width="50"

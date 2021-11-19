@@ -43,7 +43,7 @@ const CategoryPost = ({ posts }) => {
   }
 
   return (
-    <div className="container mx-auto px-10 mb-8">
+    <div className="container mx-auto  mb-8">
       {/* <h1 className="text-2xl font-bold first-letter:text-3xl first-letter:text-blue-500 first-letter:italic tracking-wide">
         {category[0].name}
       </h1> */}
@@ -71,6 +71,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: { posts },
+    revalidate: 60
   };
 }
 
