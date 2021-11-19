@@ -54,6 +54,7 @@ const BlogPostDetails = ({ post }) => {
         />
         <meta property="og:description" content={post.metaDesciption} />
         <meta property="og:image" content={post.featuredimage.url} />
+        <meta property="og:image:alt" content={`Featured Image for ${post.title} | GearOnlineColts`} />
         <meta
           property="og:url"
           content={`https://www.gearonlinecolts.com/blogs/${post.slug}`}

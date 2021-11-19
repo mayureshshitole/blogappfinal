@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from '../public/logoGOC.png'
+import logo from "../public/logoGOC.png";
 
 const categoiesList = [
   { name: "Tech News", slug: "technews" },
@@ -30,7 +30,7 @@ const Navbar = () => {
             <div className="flex justify-center items-center space-x-2 ">
               <div className="p-0.5 rounded-full bg-white flex items-center hover:animate-slowSpin">
                 <img
-                  src='/logoGOC.png'
+                  src="/logoGOC.png"
                   width="50"
                   height="50"
                   alt="Logo image for www.gearonlinecolts.com"
@@ -44,7 +44,11 @@ const Navbar = () => {
           <div className="hidden md:flex justify-center items-center px-2">
             <ul className="flex items-center text-blue-500 font-semibold space-x-5 ">
               {categoiesList.map((category, index) => (
-                <Link passHref key={category.slug} href={`/categories/${category.slug}`}>
+                <Link
+                  passHref
+                  key={category.slug}
+                  href={`/categories/${category.slug}`}
+                >
                   <li className="uppercase cursor-pointer hover:text-green-300 transform hover:scale-105 transition duration-300 ease-in-out">
                     {category.name}
                   </li>
@@ -94,14 +98,12 @@ const Navbar = () => {
       {toggle && (
         <div className="bg-bluish md:hidden flex justify-center items-center  py-2  transform transition duration-1000 ease-in-out rounded-t-lg">
           <ul className="flex flex-col mx-auto text-blue-400 font-semibold  ">
-            <li
-              className=" border-b-2 border-b-bluetext-blue-400 w-screen py-2 uppercase "
-              onClick={() => toggleMenu()}
-            >
-              <a className="ml-5">Home</a>
-            </li>
             {categoiesList.map((category, index) => (
-              <Link passHref key={category.slug} href={`/categories/${category.slug}`}>
+              <Link
+                passHref
+                key={category.slug}
+                href={`/categories/${category.slug}`}
+              >
                 <li
                   className=" border-b-2 border-b-bluetext-blue-400 w-screen py-2 uppercase "
                   onClick={() => toggleMenu()}
