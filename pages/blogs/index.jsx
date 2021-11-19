@@ -1,10 +1,10 @@
 import Head from "next/head";
 
-import { getPosts } from "../servicecalls";
+import { getPosts } from "../../servicecalls";
 
-import PostCard from "../Components/PostCard";
+import PostCard from "../../Components/PostCard";
 
-export default function Home({ posts }) {
+export default function Blogs({ posts }) {
   return (
     <div className=" subpixel-antialiased selection:bg-green-300 scrollbar-hide">
       <Head>
