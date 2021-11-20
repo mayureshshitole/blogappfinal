@@ -14,7 +14,7 @@ export default async (req, res) => {
 
   posts.map((post) =>
     links.push({
-      url: `/blog/${post.node.slug}`,
+      url: `/blogs/${post.node.slug}`,
       changefreq: "daily",
       priority: 0.9,
     })
