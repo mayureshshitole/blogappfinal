@@ -3,6 +3,7 @@ import Head from "next/head";
 import { getPosts } from "../servicecalls";
 
 import PostCard from "../components/PostCard";
+import { motion } from "framer-motion";
 
 export default function Home({ posts }) {
   return (
@@ -56,12 +57,40 @@ export default function Home({ posts }) {
       <main>
         <div className="lg:max-w-7xl mx-auto mt-3 md:mt-8 ">
           <h1 className="text-2xl font-bold first-letter:text-3xl first-letter:text-blue-500 first-letter:italic tracking-wide">
-            Recently Trending
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: { scale: 0.8, opacity: 0 },
+                visible: {
+                  scale: 1,
+                  opacity: 1,
+                  transition: {
+                    delay: 1.2,
+                    type: "spring",
+                    bounce: 0.3,
+                  },
+                },
+              }}
+            >
+              Recently Trending
+            </motion.div>
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 ld:gap-10  p-2 md:p-5 ">
-            {posts.map((post) => (
+            {posts.map((post, i) => (
               <div key={post.node.slug}>
-                <PostCard post={post.node} key={post.node.slug} />
+                <motion.div
+                  initial={{ opacity: 0, translateY: -50, translateX: -50 }}
+                  animate={{ opacity: 1, translateY: 0, translateX: 0 }}
+                  transition={{
+                    duration: 0.7,
+                    delay: i * 0.2,
+                    type: "spring",
+                    bounce: 0.3,
+                  }}
+                >
+                  <PostCard post={post.node} key={post.node.slug} />
+                </motion.div>
               </div>
             ))}
           </div>
