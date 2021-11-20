@@ -1,6 +1,7 @@
 import { request, gql } from "graphql-request";
 
-const graphcmsAPI = "https://api-eu-central-1.graphcms.com/v2/ckvxidocm3htf01xwe6ac0any/master";
+const graphcmsAPI =
+  "https://api-eu-central-1.graphcms.com/v2/ckvxidocm3htf01xwe6ac0any/master";
 
 export const getPosts = async () => {
   const query = gql`
@@ -19,6 +20,25 @@ export const getPosts = async () => {
               name
               slug
             }
+          }
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphcmsAPI, query);
+
+  return result.blogsConnection.edges;
+};
+
+export const getAllPostsTitle = async () => {
+  const query = gql`
+    query MyQuery {
+      blogsConnection {
+        edges {
+          node {
+            title
+            slug
           }
         }
       }

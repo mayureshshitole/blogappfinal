@@ -4,7 +4,7 @@ import Image from "next/image";
 import logo from "../public/logoGOC.png";
 
 const categoiesList = [
-  { name: "Tech News", slug: "technews" },
+  { name: "Tech", slug: "technews" },
   { name: "Apps", slug: "apps" },
   { name: "Softwares", slug: "softwares" },
   { name: "Unique Gadgets", slug: "uniquegadgets" },
