@@ -6,7 +6,7 @@ const graphcmsAPI =
 export const getPosts = async () => {
   const query = gql`
     query MyQuery {
-      blogsConnection(orderBy: createdAt_DESC, last: 20) {
+      blogsConnection(orderBy: createdAt_DESC, last: 30) {
         edges {
           node {
             title
@@ -112,7 +112,7 @@ export const getCategories = async () => {
 export const getCategoryPost = async (slug) => {
   const query = gql`
     query MyQuery($slug: String!) {
-      blogsConnection(where: { categories_some: { slug: $slug } }) {
+      blogsConnection(where: { categories_some: { slug: $slug } } orderBy: createdAt_DESC) {
         edges {
           cursor
           node {
